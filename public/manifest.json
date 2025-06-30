@@ -1,0 +1,69 @@
+{
+  "name": "DAYF Hotel Booking - El Aurassi Hotel",
+  "short_name": "DAYF Hotels",
+  "description": "Book luxury stays at El Aurassi Hotel in Algiers with panoramic Mediterranean Sea views",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007DD0",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["travel", "business", "lifestyle"],
+  "icons": [
+    {
+      "src": "/logo/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/logo/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "El Aurassi Hotel - Luxury Accommodation"
+    },
+    {
+      "src": "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg",
+      "sizes": "750x1334",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Book Your Stay - Mobile View"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book Now",
+      "short_name": "Book",
+      "description": "Quick access to hotel booking",
+      "url": "/booking",
+      "icons": [
+        {
+          "src": "/logo/icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "View Rooms",
+      "short_name": "Rooms",
+      "description": "Browse available room types",
+      "url": "/rooms",
+      "icons": [
+        {
+          "src": "/logo/icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

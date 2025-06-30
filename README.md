@@ -45,7 +45,12 @@ A modern, responsive hotel booking website built with Next.js 13, featuring a be
 - **Loading States**: Optimized loading experiences
 - **Accessibility**: WCAG compliant components and navigation
 
-## 🛠️ Technology Stack
+### 📱 **PWA Support**
+
+- **Progressive Web App capabilities**: Offline functionality and app-like experience
+- **Fast loading times**: Optimized for mobile devices
+
+## ��️ Technology Stack
 
 ### **Frontend Framework**
 
@@ -135,6 +140,8 @@ project/
 ├── lib/                  # Utility functions
 ├── public/               # Static assets
 │   ├── Image/           # Images and flags
+│   ├── robots.txt       # Search engine instructions
+│   ├── sitemap.xml      # Site structure for crawlers
 │   └── logo/            # Logo files
 └── .github/workflows/   # GitHub Actions
 ```
@@ -241,3 +248,46 @@ For support and questions:
 ---
 
 **Built with ❤️ using Next.js, TypeScript, and Tailwind CSS**
+
+## 📊 Content SEO
+
+This project includes comprehensive SEO optimizations:
+
+### 🔍 Technical SEO
+
+- **Enhanced Metadata**: Complete meta tags with Open Graph and Twitter Cards
+- **Structured Data**: JSON-LD markup for hotels, reviews, and local business
+- **Sitemap**: XML sitemap with all important pages
+- **Robots.txt**: Proper crawler instructions
+- **Performance**: Optimized images, fonts, and bundle splitting
+
+### 📊 Content SEO
+
+- **Target Keywords**: Hotel booking, luxury accommodation, Algiers
+- **Local SEO**: Complete business information and coordinates
+- **Reviews**: Guest testimonials with structured data
+- **FAQ**: Interactive FAQ section with schema markup
+- **Breadcrumbs**: Navigation with structured data
+
+### 🌐 International SEO
+
+- **Multi-language**: English, French, and Arabic support
+- **Localized Content**: Region-specific keywords and content
+- **Hreflang Tags**: Language targeting for search engines
+
+### 📱 Mobile SEO
+
+- **Mobile-first Design**: Optimized for mobile search
+- **Core Web Vitals**: Fast loading and smooth interactions
+- **Touch-friendly**: Optimized for mobile users
+
+## 📞 Support
+
+For support and questions, please contact:
+
+- Email: info@dayf-hotel-booking.com
+- Website: https://dayf-hotel-booking.com
+
+---
+
+Built with ❤️ for El Aurassi Hotel

@@ -9,6 +9,10 @@ import ImageGallery from "@/components/hotel/ImageGallery";
 import Policies from "@/components/hotel/Policies";
 import PropertyDetails from "@/components/hotel/PropertyDetails";
 import RelatedHotels from "@/components/hotel/RelatedHotels";
+import Breadcrumb from "@/components/seo/Breadcrumb";
+import LocalBusinessData, {
+  elAurassiHotelData,
+} from "@/components/seo/LocalBusinessData";
 import { Button } from "@/components/ui/button";
 import {
   Car,
@@ -95,6 +99,49 @@ const reviews = [
   },
 ];
 
+// SEO-optimized reviews for ReviewSection component
+const seoReviews = [
+  {
+    id: "1",
+    author: {
+      name: "Sophie M.",
+      location: "France",
+    },
+    rating: 5,
+    title: "Breathtaking Views and Luxury Comfort",
+    content:
+      "The hotel exceeded all expectations with stunning ocean views and impeccable service.",
+    date: "2024-10-15",
+    verified: true,
+  },
+  {
+    id: "2",
+    author: {
+      name: "Youssef H.",
+      location: "Morocco",
+    },
+    rating: 5,
+    title: "Exceptional Stay with Excellent Amenities",
+    content:
+      "Perfect location, amazing staff, and beautiful facilities. Highly recommended!",
+    date: "2024-10-12",
+    verified: true,
+  },
+  {
+    id: "3",
+    author: {
+      name: "Ahmed K.",
+      location: "Algeria",
+    },
+    rating: 4,
+    title: "Great Business Hotel",
+    content:
+      "Perfect for business travelers. Clean rooms, good WiFi, and excellent conference facilities.",
+    date: "2024-10-10",
+    verified: true,
+  },
+];
+
 const relatedHotels = [
   {
     name: "Sofitel Algiers Hamma Garden",
@@ -164,7 +211,19 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
+
+      {/* SEO Structured Data */}
+      <LocalBusinessData {...elAurassiHotelData} />
+
       <div className="mx-auto px-4 sm:px-6 lg:px-24 py-8">
+        {/* Breadcrumb Navigation */}
+        <Breadcrumb
+          items={[
+            { label: "Hotels", href: "/hotels" },
+            { label: "El Aurassi Hotel" },
+          ]}
+        />
+
         <div>
           {/* Main Content */}
           <div className="">
@@ -173,11 +232,11 @@ export default function Home() {
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <h1 className="text-3xl font-bold text-gray-900 mb-5">
-                    El Aurassi Hotel
+                    El Aurassi Hotel - Luxury Accommodation in Algiers
                   </h1>
                   <p className="text-gray-600 flex items-center mt-1">
                     Luxurious modern rooms with panoramic views of the
-                    Mediterranean Sea
+                    Mediterranean Sea in the heart of Algiers, Algeria
                   </p>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -200,27 +259,14 @@ export default function Home() {
               setSelectedImage={setSelectedImage}
             />
             <PropertyDetails />
-            {/* <AmenitiesList amenities={amenities} />
-            <RoomAvailability roomTypes={roomTypes} /> */}
+
             <AboutProperty />
             <ExploreArea />
             <GuestReviews reviews={reviews} />
+
             <Policies />
             <RelatedHotels relatedHotels={relatedHotels} />
           </div>
-          {/* Booking Sidebar
-          <div className="lg:col-span-1">
-            <BookingSidebar
-              checkIn={checkIn}
-              setCheckIn={setCheckIn}
-              checkOut={checkOut}
-              setCheckOut={setCheckOut}
-              guests={guests}
-              setGuests={setGuests}
-              children={children}
-              setChildren={setChildren}
-            />
-          </div> */}
         </div>
       </div>
       <Footer />
