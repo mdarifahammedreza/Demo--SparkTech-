@@ -24,7 +24,7 @@ export default function Header() {
   const currentLang = languages.find((l) => l.code === selectedLang);
 
   return (
-    <header className="bg-[#E9F6FF] shadow-sm border-b">
+    <header className="bg-[#E9F6FF] ">
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-24">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-8">

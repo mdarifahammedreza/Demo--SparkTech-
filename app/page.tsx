@@ -155,7 +155,7 @@ export default function Home() {
                   <Button variant="outline" size="sm">
                     Share
                   </Button>
-                  <Button className="bg-blue-600 hover:bg-blue-700">
+                  <Button className="bg-[#007DD0] hover:bg-[#005f9e]">
                     Reserve
                   </Button>
                 </div>
