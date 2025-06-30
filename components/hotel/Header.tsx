@@ -106,7 +106,7 @@ export default function Header() {
               <SelectContent>
                 {languages.map((lang) => (
                   <SelectItem key={lang.code} value={lang.code}>
-                    <div className="flex items-center space-x-2 z-[101]">
+                    <div className="flex items-center space-x-2">
                       <Image
                         src={lang.flag}
                         alt={lang.code + " flag"}
