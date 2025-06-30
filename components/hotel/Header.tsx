@@ -24,7 +24,7 @@ export default function Header() {
   const currentLang = languages.find((l) => l.code === selectedLang);
 
   return (
-    <header className="bg-[#E9F6FF] ">
+    <header className="bg-[#E9F6FF] py-3 sticky top-0 z-[100]">
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-24">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-8">
@@ -80,7 +80,7 @@ export default function Header() {
               <SelectContent>
                 {languages.map((lang) => (
                   <SelectItem key={lang.code} value={lang.code}>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center space-x-2 z-[101]">
                       <p>example</p>
                     </div>
                   </SelectItem>
@@ -106,7 +106,7 @@ export default function Header() {
               <SelectContent>
                 {languages.map((lang) => (
                   <SelectItem key={lang.code} value={lang.code}>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center space-x-2 z-[101]">
                       <Image
                         src={lang.flag}
                         alt={lang.code + " flag"}

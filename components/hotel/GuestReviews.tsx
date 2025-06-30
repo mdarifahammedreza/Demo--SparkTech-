@@ -27,7 +27,10 @@ export default function GuestReviews({ reviews }: GuestReviewsProps) {
       <CardContent>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {reviews.map((review, index) => (
-            <div key={index} className="space-y-3">
+            <div
+              key={index}
+              className="space-y-3 border border-[#007DD0] rounded-xl p-4"
+            >
               <div className="flex items-center space-x-2">
                 <div className="flex">
                   {[...Array(review.rating)].map((_, i) => (

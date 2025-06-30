@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import Image from "next/image";
 
 interface RelatedHotel {
   name: string;
@@ -21,26 +22,32 @@ export default function RelatedHotels({ relatedHotels }: RelatedHotelsProps) {
         <CardTitle>You may also like</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {relatedHotels.map((hotel, index) => (
-            <div key={index} className="space-y-4">
-              <div className="relative h-48 rounded-lg overflow-hidden">
-                <img
+            <div key={index} className="space-y-3">
+              {/* Image container */}
+              <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
+                <Image
                   src={hotel.image}
                   alt={hotel.name}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
-              <div>
-                <h3 className="font-semibold">{hotel.name}</h3>
+
+              {/* Hotel Info */}
+              <div className="space-y-1">
+                <h3 className="font-semibold text-lg">{hotel.name}</h3>
                 <p className="text-sm text-gray-600">{hotel.location}</p>
+
+                {/* Star Rating */}
                 <div className="flex items-center space-x-2 mt-1">
-                  <div className="flex">
+                  <div className="flex space-x-0.5">
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className={`w-3 h-3 ${
-                          i < Math.floor(hotel.rating)
+                        className={`w-4 h-4 ${
+                          i < Math.round(hotel.rating)
                             ? "fill-yellow-400 text-yellow-400"
                             : "text-gray-300"
                         }`}
@@ -49,12 +56,14 @@ export default function RelatedHotels({ relatedHotels }: RelatedHotelsProps) {
                   </div>
                   <span className="text-sm text-gray-600">{hotel.rating}</span>
                 </div>
+
+                {/* Price + Book */}
                 <div className="flex items-center justify-between mt-2">
                   <div>
                     <span className="text-xl font-bold">${hotel.price}</span>
-                    <span className="text-sm text-gray-600"> per night</span>
+                    <span className="text-sm text-gray-600"> / night</span>
                   </div>
-                  <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+                  <Button size="sm" className="bg-[#007DD0] hover:bg-[#005f9e]">
                     Book Now
                   </Button>
                 </div>

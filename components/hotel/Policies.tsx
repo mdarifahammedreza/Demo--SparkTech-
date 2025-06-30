@@ -1,53 +1,80 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Policies() {
+  const policies = [
+    {
+      title: "Check-in",
+      detail: (
+        <>
+          Available 24 hours. <br />
+          You&apos;ll need to let the property know in advance what time
+          you&apos;ll arrive.
+        </>
+      ),
+    },
+    {
+      title: "Check-out",
+      detail: "Available 24 hours",
+    },
+    {
+      title: "Cancellation/prepayment",
+      detail:
+        "Cancellation and prepayment policies vary according to accommodation type.",
+    },
+    {
+      title: "Children and beds",
+      detail:
+        "Children 12 years and above will be charged as adults at this property.",
+    },
+    {
+      title: "No age restriction",
+      detail: "There is no age requirement for check-in.",
+    },
+    {
+      title: "Pets",
+      detail: "Pets are not allowed.",
+    },
+    {
+      title: "Cash only",
+      detail: "This property only accepts cash payments.",
+    },
+  ];
+
   return (
     <Card>
       <CardHeader>
         <CardTitle>Policies</CardTitle>
       </CardHeader>
-      <CardContent className="space-y-6">
-        <div>
-          <h4 className="font-semibold mb-2">Check-in</h4>
-          <p className="text-sm text-gray-600">Available 24 hours</p>
-          <p className="text-sm text-gray-600">
-            You&apos;ll need to let the property know in advance what time
-            you&apos;ll arrive.
-          </p>
-        </div>
-        <div>
-          <h4 className="font-semibold mb-2">Check-out</h4>
-          <p className="text-sm text-gray-600">Available 24 hours</p>
-        </div>
-        <div>
-          <h4 className="font-semibold mb-2">Cancellation/prepayment</h4>
-          <p className="text-sm text-gray-600">
-            Cancellation and prepayment policies vary according to accommodation
-            type.
-          </p>
-        </div>
-        <div>
-          <h4 className="font-semibold mb-2">Children and beds</h4>
-          <p className="text-sm text-gray-600">
-            Children 12 years and above will be charged as adults at this
-            property.
-          </p>
-        </div>
-        <div>
-          <h4 className="font-semibold mb-2">No age restriction</h4>
-          <p className="text-sm text-gray-600">
-            There is no age requirement for check-in
-          </p>
-        </div>
-        <div>
-          <h4 className="font-semibold mb-2">Pets</h4>
-          <p className="text-sm text-gray-600">Pets are not allowed</p>
-        </div>
-        <div>
-          <h4 className="font-semibold mb-2">Cash only</h4>
-          <p className="text-sm text-gray-600">
-            This property only accepts cash payments
-          </p>
+      <CardContent>
+        <div className="overflow-x-auto">
+          <table className="min-w-full text-sm text-left border border-gray-200 rounded-md overflow-hidden">
+            <thead className="bg-gray-100">
+              <tr>
+                <th className="px-4 py-2 font-semibold text-gray-700 w-1/4">
+                  Policy
+                </th>
+                <th className="px-4 py-2 font-semibold text-gray-700">
+                  Details
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-200">
+              {policies.map((policy, index) => (
+                <tr key={index} className="bg-white">
+                  <td className="px-4 py-3 font-medium text-gray-900">
+                    {policy.title}
+                  </td>
+                  <td className="px-4 py-3 text-gray-700">
+                    {typeof policy.detail === "string" ? (
+                      <p>{policy.detail}</p>
+                    ) : (
+                      policy.detail
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </CardContent>
     </Card>

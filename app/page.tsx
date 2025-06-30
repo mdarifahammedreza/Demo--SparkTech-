@@ -1,7 +1,6 @@
 "use client";
 
 import AboutProperty from "@/components/hotel/AboutProperty";
-import AmenitiesList from "@/components/hotel/AmenitiesList";
 import ExploreArea from "@/components/hotel/ExploreArea";
 import Footer from "@/components/hotel/Footer";
 import GuestReviews from "@/components/hotel/GuestReviews";
@@ -10,7 +9,6 @@ import ImageGallery from "@/components/hotel/ImageGallery";
 import Policies from "@/components/hotel/Policies";
 import PropertyDetails from "@/components/hotel/PropertyDetails";
 import RelatedHotels from "@/components/hotel/RelatedHotels";
-import RoomAvailability from "@/components/hotel/RoomAvailability";
 import { Button } from "@/components/ui/button";
 import {
   Car,
@@ -119,6 +117,41 @@ const relatedHotels = [
     price: 189,
     image: "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg",
   },
+  {
+    name: "Sheraton Club des Pins Resort",
+    location: "Algiers",
+    rating: 4.6,
+    price: 249,
+    image: "https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg",
+  },
+  {
+    name: "Hilton Alger",
+    location: "Algiers",
+    rating: 4.7,
+    price: 189,
+    image: "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg",
+  },
+  {
+    name: "Hilton Alger",
+    location: "Algiers",
+    rating: 4.7,
+    price: 189,
+    image: "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg",
+  },
+  {
+    name: "Hilton Alger",
+    location: "Algiers",
+    rating: 4.7,
+    price: 189,
+    image: "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg",
+  },
+  {
+    name: "Hilton Alger",
+    location: "Algiers",
+    rating: 4.7,
+    price: 189,
+    image: "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg",
+  },
 ];
 
 export default function Home() {
@@ -167,8 +200,8 @@ export default function Home() {
               setSelectedImage={setSelectedImage}
             />
             <PropertyDetails />
-            <AmenitiesList amenities={amenities} />
-            <RoomAvailability roomTypes={roomTypes} />
+            {/* <AmenitiesList amenities={amenities} />
+            <RoomAvailability roomTypes={roomTypes} /> */}
             <AboutProperty />
             <ExploreArea />
             <GuestReviews reviews={reviews} />
